@@ -11,3 +11,5 @@ streamlit
 joblib
 pytest
 python-multipart
+google-generativeai
+python-dotenv
