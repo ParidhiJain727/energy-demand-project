@@ -20,6 +20,7 @@ This project demonstrates a complete ML pipeline:
 - Evaluation and error analysis
 - API deployment with FastAPI
 - Interactive dashboard with Streamlit
+- **Power-Pulse Assistant**: LLM-powered grid analyst chatbot
 
 ---
 
@@ -105,11 +106,33 @@ The project includes an interactive Streamlit dashboard for exploring model pred
 - Real-time model inference
 - Display of evaluation metrics
 - Visualization of forecasting results and residual analysis
+- **Power-Pulse Assistant**: A dedicated AI analyst for natural language queries
 
-### Run dashboard
+### Installation & Setup
+
+1. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Configure Environment**:
+   - Rename `.env.example` to `.env`.
+   - Add your `GEMINI_API_KEY` from [Google AI Studio](https://aistudio.google.com/app/apikey).
+
+### Run Dashboard
+```bash
+streamlit run dashboard/dashboard_app.py
 ```
-streamlit run dashboard/app.py
-```
+
+## Power-Pulse Assistant (Chatbot)
+
+The project features a **Power-Pulse Assistant**—a specialized AI analyst powered by Google's Gemini API.
+
+### Capabilities:
+- **Natural Language Analysis**: Ask questions like "Explain why the peak occurs at 6 PM" or "What is Lag 24?".
+- **Context Awareness**: The bot maintains conversation history for the duration of your logged-in session.
+- **Domain Guardrails**: The assistant is strictly focused on energy, electricity, and the PowerPlay model.
+- **Privacy**: Chat history is automatically wiped the moment you log out.
 
 ---
 
